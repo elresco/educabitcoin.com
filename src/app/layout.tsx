@@ -1,8 +1,13 @@
 import "~/styles/globals.css"
+import { env } from "~/env"
+import Footer from "~/component/Footer"
 
 import Link from "next/link"
+import { Inter } from "next/font/google"
+import { Metadata } from "next"
 
 export const metadata: Metadata = {
+  metadataBase: new URL(env.NEXT_PUBLIC_DOMAIN),
   title: "EducaBitcoin",
   description: "EducaBitcoin",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
@@ -13,9 +18,6 @@ export const metadata: Metadata = {
     images: ["/img/educabitcoin-logo.jpg"],
   }
 }
-
-import { Inter } from "next/font/google"
-import { Metadata } from "next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,8 +30,7 @@ export default function Layout(props: { children: React.ReactNode }) {
       <header className="flex py-2 px-8 items-center justify-end gap-4">
       </header>
       <main className="p-8">{props.children}</main>
-      <footer>
-      </footer>
+      <Footer />
     </div>
   </body>
 }

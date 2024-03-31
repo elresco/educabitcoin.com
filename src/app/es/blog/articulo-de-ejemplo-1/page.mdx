@@ -1,4 +1,5 @@
 import BlogHeader from "~/component/BlogHeader"
+import VideoEmbed from "~/component/VideoEmbed"
 
 export const title = "El timing en Bitcoin"
 export const description = "Que de hecho sigo haciéndolo. Sigo comprando bitcoin siempre que tengo ahorros extras porqué sabemos que el colapso del sistema monetario actual es un hecho inevitable."
@@ -6,14 +7,14 @@ export const author = "Rescode"
 export const imagePath = "/img/header.jpeg"
 
 export const metadata = {
-  title: title,
-  description: description,
-  twitter: {
-    images: [imagePath],
-  },
-  openGraph: {
-    images: [imagePath],
-  }
+    title: title,
+    description: description,
+    twitter: {
+        images: imagePath,
+    },
+    openGraph: {
+        images: imagePath,
+    }
 }
 
 <BlogHeader title={title} description={description} author={author} imagePath={imagePath} />
@@ -31,3 +32,33 @@ Por esto muchos decidimos avanzarnos a este cuando colapsará el sistema, compra
 
 
 El problema es que cuando lo hacemos (comprar BTC), vuelve a salir una cuestión de cuando: el cuando comprar. Cuál es el momento perfecto. El timing ideal.
+
+![comic-prediccion-bolsa](/img/comic-prediccion-bolsa.png)
+
+> blockquote
+> El problema es que cuando lo hacemos (comprar BTC), vuelve a salir una
+> cuestión de cuando: el cuando comprar. Cuál es el momento perfecto. El timing ideal.
+
+<VideoEmbed url={"https://www.youtube.com/embed/RC2-apE9fu8"} title={"Puse el 100% de mis ahorros en Bitcoin - Pau Ninja en televisión"} />
+
+TABLAS DE CONTENIDO
+
+1. First item
+2. Second item
+3. Third item
+    1. Indented item
+    2. Indented item
+4. Fourth item
+
+<br/>
+
+- First item
+- Second item
+- Third item
+    - Indented item
+    - Indented item
+- Fourth item
+
+LISTA CATEGORIAS
+
+NEWSLETTER

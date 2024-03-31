@@ -1,6 +1,7 @@
+import "~/styles/globals.css"
+
 import Link from "next/link"
 import BlogLayout from "~/component/BlogLayout"
-import "~/styles/globals.css"
 
 export default function Layout(props: { children: React.ReactNode }) {
   return <>
