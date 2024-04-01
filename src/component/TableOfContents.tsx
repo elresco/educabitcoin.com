@@ -1,36 +1,15 @@
-import Link from "next/link"
 import React, { type ReactNode } from "react"
+
 import { encodeElementId } from "~/common/utils"
+import { TOC, type TOCRef } from "./TOC"
 
 type Props = {
     title: string
     children: React.ReactNode
 }
 
-type Ref = {
-    id: string
-    title: string
-}
-
-type SubProps = {
-    h1s: Ref[]
-} & Props
-
-function TOC(props: SubProps) {
-    return <div id="table-of-contents" className="w-full mb-8 bg-gray-100 px-4 py-3 text-left text-gray-800 break-words max-w-md rounded">
-        <div className="mx-auto text-xl font-semibold">
-            <strong>{props.title}</strong>
-        </div>
-        <ul className="mt-2 list-disc px-2 pl-6">
-            {props.h1s.map((h1, i) => <li key={`toc-h-${i}`}>
-                <Link className="cursor-pointer block hover:bg-gray-200 px-2 py-1 rounded" href={`#${h1.id}`}>{h1.title}</Link>
-            </li>)}
-        </ul>
-    </div>
-}
-
-function extractH1(children: ReactNode): Ref[] {
-    const headers: Ref[] = []
+function extractH1(children: ReactNode): TOCRef[] {
+    const headers: TOCRef[] = []
     React.Children.forEach(children, (child) => {
 
         if (!React.isValidElement(child)) {
@@ -44,7 +23,6 @@ function extractH1(children: ReactNode): Ref[] {
                 title: child.props.children,
             })
         }
-        
 
         // eslint-disable-next-line
         if (child.props.children) {
