@@ -25,12 +25,14 @@ const inter = Inter({
 })
 
 export default function Layout(props: { children: React.ReactNode }) {
-  return <body className={`font-sans ${inter.variable}`}>
-    <div className="min-h-screen bg-gray-50">
-      <header className="flex py-2 px-8 items-center justify-end gap-4">
-      </header>
-      <main className="p-8">{props.children}</main>
-      <Footer />
-    </div>
-  </body>
+  return <html>
+    <body className={`font-sans ${inter.variable}`}>
+      <div className="min-h-screen bg-gray-50">
+        <header className="flex py-2 px-8 items-center justify-end gap-4">
+        </header>
+        <main className="p-8">{props.children}</main>
+        <Footer />
+      </div>
+    </body>
+  </html>
 }

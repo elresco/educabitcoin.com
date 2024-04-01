@@ -1,10 +1,13 @@
 import BlogHeader from "~/component/BlogHeader"
 import VideoEmbed from "~/component/VideoEmbed"
+import Blockquote from "~/component/Blockquote"
+import TableOfContents from "~/component/TableOfContents"
 
 export const title = "El timing en Bitcoin"
 export const description = "Que de hecho sigo haciéndolo. Sigo comprando bitcoin siempre que tengo ahorros extras porqué sabemos que el colapso del sistema monetario actual es un hecho inevitable."
 export const author = "Rescode"
 export const imagePath = "/img/header.jpeg"
+export const updatedAt = `📆 Actualizado ${new Date().getFullYear()}`
 
 export const metadata = {
     title: title,
@@ -17,7 +20,7 @@ export const metadata = {
     }
 }
 
-<BlogHeader title={title} description={description} author={author} imagePath={imagePath} />
+<BlogHeader title={title} description={description} author={author} imagePath={imagePath} updatedAt={updatedAt} />
 
 Ya sabéis que desde hace años **usé todo mi patrimonio (el 100%) para comprar bitcoins.**
 
@@ -26,10 +29,13 @@ Que de hecho sigo haciéndolo. Sigo comprando bitcoin siempre que tengo ahorros 
 
 No es una cuestión de y si… sino de cuando.
 
-<br/>
+<TableOfContents
+    title="Tabla de contenidos" 
+>
 
 Por esto muchos decidimos avanzarnos a este cuando colapsará el sistema, comprando bitcoin como el mejor valor refugio.
 
+# El timing en Bitcoin 1
 
 El problema es que cuando lo hacemos (comprar BTC), vuelve a salir una cuestión de cuando: el cuando comprar. Cuál es el momento perfecto. El timing ideal.
 
@@ -41,7 +47,12 @@ El problema es que cuando lo hacemos (comprar BTC), vuelve a salir una cuestión
 
 <VideoEmbed url={"https://www.youtube.com/embed/RC2-apE9fu8"} title={"Puse el 100% de mis ahorros en Bitcoin - Pau Ninja en televisión"} />
 
-TABLAS DE CONTENIDO
+<Blockquote
+    author="Rescode"
+    content="El problema es que cuando lo hacemos (comprar BTC), vuelve a salir una cuestión de cuando: el cuando comprar. Cuál es el momento perfecto. El timing ideal."
+/>
+
+<br/>
 
 1. First item
 2. Second item
@@ -59,6 +70,19 @@ TABLAS DE CONTENIDO
     - Indented item
 - Fourth item
 
+<br/>
+
+## El timing en Bitcoin 2
+### El timing en Bitcoin 3
+
+</TableOfContents>
+
+## TODO
+
 LISTA CATEGORIAS
 
-NEWSLETTER
+NEWSLETTER FOOTER APUNTARSE
+
+ESTRUCTURA BLOG
+
+LISTA DE RECOMENDACIONES
