@@ -1,5 +1,5 @@
 import Link from "next/link"
-import React, { ReactNode } from "react"
+import React, { type ReactNode } from "react"
 import { encodeElementId } from "~/common/utils"
 
 type Props = {
@@ -22,7 +22,7 @@ function TOC(props: SubProps) {
             <strong>{props.title}</strong>
         </div>
         <ul className="mt-2 list-disc px-2 pl-6">
-            {props.h1s.map(h1 => <li>
+            {props.h1s.map((h1, i) => <li key={`toc-h-${i}`}>
                 <Link className="cursor-pointer block hover:bg-gray-200 px-2 py-1 rounded" href={`#${h1.id}`}>{h1.title}</Link>
             </li>)}
         </ul>
@@ -38,12 +38,16 @@ function extractH1(children: ReactNode): Ref[] {
         }
         if (typeof child.type === "function" && (child.type.name === "h1" || child.type.name === "h2" || child.type.name === "h3")) {
             headers.push({
+                // eslint-disable-next-line
                 id: encodeElementId(child.props.children),
+                // eslint-disable-next-line
                 title: child.props.children,
             })
         }
 
+        // eslint-disable-next-line
         if (child.props.children) {
+            // eslint-disable-next-line
             headers.push(...extractH1(child.props.children))
         }
     })

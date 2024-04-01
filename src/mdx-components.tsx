@@ -17,7 +17,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         return <li className="flex items-center justify-start">🔸 {props.children}</li>
       }
     },
-    br: ({ children }) => <><br /><br /></>,
+    br: () => <><br /><br /></>,
     img: ({ src, alt }) => <div className="flex items-center justify-center"><img src={src} alt={alt} /></div>,
     p: ({ children }) => <div className="mb-7">{children}</div>,
     h1: ({ children }) => <h1 id={encodeElementId(children)} className="text-3xl font-black mb-7">{children}</h1>,

@@ -2,9 +2,8 @@ import "~/styles/globals.css"
 import { env } from "~/env"
 import Footer from "~/component/Footer"
 
-import Link from "next/link"
 import { Inter } from "next/font/google"
-import { Metadata } from "next"
+import { type Metadata } from "next"
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_DOMAIN),
