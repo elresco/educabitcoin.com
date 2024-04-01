@@ -44,6 +44,7 @@ function extractH1(children: ReactNode): Ref[] {
                 title: child.props.children,
             })
         }
+        
 
         // eslint-disable-next-line
         if (child.props.children) {
