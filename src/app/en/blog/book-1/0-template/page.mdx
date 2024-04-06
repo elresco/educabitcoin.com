@@ -1,0 +1,29 @@
+import BlogHeader from "~/component/BlogHeader"
+import VideoEmbed from "~/component/VideoEmbed"
+import Blockquote from "~/component/Blockquote"
+import TableOfContents from "~/component/TableOfContents"
+
+export const title = "TITULO"
+export const subtititle = undefined
+export const author = "Rescode"
+export const imagePath = undefined
+export const updatedAt = `📆 ${new Date().getFullYear()} updated`
+
+export const metadata = {
+    title: title,
+    description: subtititle,
+    twitter: {
+        images: imagePath,
+    },
+    openGraph: {
+        images: imagePath,
+    }
+}
+
+<BlogHeader title={title} subtitulo={subtititle} author={author} imagePath={imagePath} updatedAt={updatedAt} />
+
+<TableOfContents
+    title="Table of Contents"
+>
+
+</TableOfContents>
